@@ -30,6 +30,7 @@ body{
 }
 .navbar-inverse {
     background: #303F9F;
+    opacity: .85;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
