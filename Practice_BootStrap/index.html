@@ -47,7 +47,7 @@
                 <li><a href="ContactUs.html" class="fa fa-envelope-o"> Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#loginModal">
+                <li><a id="loginButton" data-toggle="modal">
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                 </li>
             </ul>
@@ -93,13 +93,12 @@
                 </div>
                 <p style="padding: 35px;"></p>
                 <div class="col-xs-12 col-sm-2">
-                    <a id="reserve_a_table" type="button" class="btn btn-warning btn-block" data-toggle="modal"
-                       data-target="#reserveModal">Reserve Table</a>
+                    <a id="reserveButton" type="button" class="btn btn-warning btn-block">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
-<div id="reserveModal" class="modal fade" role="dialog">
+<div id="reserveTable" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -374,7 +373,13 @@
         });
     });
 
+    $("#loginButton").click(function() {
+        $("#loginModal").modal('show');
+    });
 
+    $("#reserveButton").click(function() {
+        $("#reserveTable").modal('show');
+    });
 </script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as
